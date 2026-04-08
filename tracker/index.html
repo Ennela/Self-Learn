@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Java Backend Learning Roadmap Tracker - Theo dõi tiến độ học Java từ Core đến Backend">
+    <title>Java Backend Roadmap Tracker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bg-grid"></div>
+    <div class="bg-glow bg-glow-1"></div>
+    <div class="bg-glow bg-glow-2"></div>
+    <div class="bg-glow bg-glow-3"></div>
+
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <span class="logo-icon">☕</span>
+                <div>
+                    <h1>Java Backend Roadmap</h1>
+                    <p class="subtitle">Self-Learn Progress Tracker</p>
+                </div>
+            </div>
+            <div class="header-stats">
+                <div class="stat-chip">
+                    <span class="stat-label">Tổng tiến độ</span>
+                    <span class="stat-value" id="totalProgress">0%</span>
+                </div>
+                <div class="stat-chip">
+                    <span class="stat-label">Hoàn thành</span>
+                    <span class="stat-value" id="totalDone">0/0</span>
+                </div>
+                <div class="stat-chip streak-chip">
+                    <span class="stat-label">🔥 Streak</span>
+                    <span class="stat-value" id="streakDays">0 ngày</span>
+                </div>
+            </div>
+        </div>
+        <div class="progress-bar-container">
+            <div class="progress-bar" id="totalProgressBar"></div>
+        </div>
+    </header>
+
+    <main class="main">
+        <nav class="phase-nav" id="phaseNav"></nav>
+        <div class="phases-container" id="phasesContainer"></div>
+    </main>
+
+    <div class="toast-container" id="toastContainer"></div>
+
+    <footer class="footer">
+        <p>Made with ❤️ for <strong>Ennela</strong> · Data saved in localStorage</p>
+        <div class="footer-actions">
+            <button class="btn btn-outline" id="btnExport" title="Export tiến độ">📤 Export</button>
+            <button class="btn btn-outline" id="btnImport" title="Import tiến độ">📥 Import</button>
+            <button class="btn btn-danger" id="btnReset" title="Reset toàn bộ tiến độ">🔄 Reset</button>
+        </div>
+    </footer>
+
+    <input type="file" id="importFile" accept=".json" style="display:none">
+    <script src="app.js"></script>
+</body>
+</html>
